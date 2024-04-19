@@ -15,10 +15,10 @@ class GameCell extends StatelessWidget {
         padding: const EdgeInsets.all(12.0),
         child: Row(
         children: 
-        [Image.asset("images/$image",width: 170,),
+        [Image.asset("images/$image",width: 150,),
         Padding(
           
-          padding: const EdgeInsets.only(left: 12),
+          padding: const EdgeInsets.symmetric(horizontal: 12),
           child: Center(
         
             child: Column(
