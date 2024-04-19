@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_seance1/details.dart';
 import 'package:flutter_application_seance1/list.dart';
 
 void main() {
@@ -11,7 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "My First App",
-      home:  ListWidget(),
+      home:  DetailsScreen(),
     );
   }
 }
