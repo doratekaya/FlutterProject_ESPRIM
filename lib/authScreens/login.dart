@@ -1,19 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_seance1/home.dart';
 
-class Inscription extends StatefulWidget {
-  const Inscription({super.key});
-  static final String routeName = "/signup";
+class LoginScreen extends StatefulWidget {
+
+  static final String routeName = "/";
+  const LoginScreen({super.key});
 
   @override
-  State<Inscription> createState() => _InscriptionState();
+  State<LoginScreen> createState() => _LoginScreenState();
 }
 
-class _InscriptionState extends State<Inscription> {
-  GlobalKey<FormState> form=GlobalKey();
-
+class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+  GlobalKey<FormState> form=GlobalKey();
+
+   return Scaffold(
       appBar: AppBar(title: Text("Game Esprim"),),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
@@ -23,21 +25,7 @@ class _InscriptionState extends State<Inscription> {
               key: form,
               child: Column(children: [
 
-                //1 text 1
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: TextFormField(
                 
-                  decoration: InputDecoration(
-                    labelText: 'User name',
-                    border: OutlineInputBorder(),
-                  ),validator: ((value) {
-                    if (value!.isEmpty){
-                      return'please enter some text';
-                    }
-                  }),
-                ),
-              ),
                 //text2 
                   Padding(
                     padding: const EdgeInsets.all(8.0),
@@ -69,7 +57,7 @@ class _InscriptionState extends State<Inscription> {
 
                 ,ElevatedButton(onPressed:(() {
                 if(form.currentState!.validate()){
-                  ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Processing data')));
+                  Navigator.pushNamed(context, HomeScreen.routeName);
                 }
               }), child: Text("Submit")
               )
@@ -78,5 +66,6 @@ class _InscriptionState extends State<Inscription> {
         ),
       ),
     );
+  
   }
 }

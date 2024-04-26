@@ -4,6 +4,7 @@ import 'package:flutter_application_seance1/models/game.dart';
 
 class ListWidget extends StatefulWidget {
   const ListWidget({super.key});
+  static final String routeName = "/List";
 
   @override
   State<ListWidget> createState() => _ListWidgetState();
@@ -20,9 +21,7 @@ class _ListWidgetState extends State<ListWidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Game-ESPRIM STORE"),
-      ),
+     
       body:ListView.builder(
         itemCount: games.length ,
         itemBuilder: (context,index){

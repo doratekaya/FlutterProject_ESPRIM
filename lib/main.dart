@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_seance1/authScreens/inscription.dart';
+import 'package:flutter_application_seance1/authScreens/login.dart';
+import 'package:flutter_application_seance1/favoris/favoris.dart';
+import 'package:flutter_application_seance1/home.dart';
 import 'package:flutter_application_seance1/store/details.dart';
 import 'package:flutter_application_seance1/store/list.dart';
 
@@ -13,8 +16,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "My First App",
-      home:  Inscription(),
-      
+     
+      routes: {
+        LoginScreen.routeName:(context) => LoginScreen(),
+        HomeScreen.routeName:(context) => HomeScreen(),
+        FavorisScreen.routeName :(context) => FavorisScreen()
+      },
     );
   }
 }
