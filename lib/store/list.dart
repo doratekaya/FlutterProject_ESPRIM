@@ -21,11 +21,10 @@ class _ListWidgetState extends State<ListWidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-     
       body:ListView.builder(
         itemCount: games.length ,
         itemBuilder: (context,index){
-          return GameCell(games[index].image, games[index].name, games[index].prix);
+          return GameCell(games[index]);
         }) ,
     );
   }

@@ -24,9 +24,11 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(title: Text("Home Page"),),
       body: interfaces[index],
       drawer: Drawer(
-        child: Scaffold(appBar: AppBar(title: Text("HELLO FROM DRAWER"),
+        child: Scaffold(
+          appBar: AppBar(title: Text("HELLO FROM DRAWER"),
         ),
-        body:Column(children: [
+        body:Column(
+          children: [
 
           //1
           ListTile(title: Row(

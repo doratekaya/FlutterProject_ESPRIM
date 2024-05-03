@@ -21,6 +21,7 @@ class MyApp extends StatelessWidget {
       routes: {
         LoginScreen.routeName:(context) => LoginScreen(),
         HomeScreen.routeName:(context) => HomeScreen(),
+         DetailsScreen.routeName :(context) => DetailsScreen(),
         FavorisScreen.routeName :(context) => FavorisScreen(),
         CustomTabBar.routeName :(context) => CustomTabBar()
       },

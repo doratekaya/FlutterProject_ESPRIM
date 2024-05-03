@@ -17,7 +17,8 @@ class _CustomTabBarState extends State<CustomTabBar> {
   Widget build(BuildContext context) {
     return DefaultTabController(
       length: 2,
-      child: Scaffold(appBar: AppBar(title: Text("Tab Bar"),
+      child: Scaffold(
+        appBar: AppBar(title: Text("Tab Bar"),
       bottom: TabBar(tabs: [
         //1
         Tab(

@@ -1,9 +1,8 @@
 class Game{
   //Attr
-  final String name;
-  final double prix;
-  final String image;
-
+  late String name;
+  late double prix;
+  late String image;
    Game(this.image,this.name,this.prix);
 
 }
