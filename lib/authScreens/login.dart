@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_seance1/home.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class LoginScreen extends StatefulWidget {
 
-  static final String routeName = "/";
+  static final String routeName = "/login";
   const LoginScreen({super.key});
 
   @override
@@ -11,6 +12,14 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
+    
+    final TextEditingController tfemail =TextEditingController();
+
+   void SaveUser(String s){
+    SharedPreferences.getInstance().then((value) => 
+    value.setString("username", s));
+   }
+
   @override
   Widget build(BuildContext context) {
   GlobalKey<FormState> form=GlobalKey();
@@ -30,6 +39,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: TextFormField(
+                      controller: tfemail,
                                   decoration: InputDecoration(
                     labelText: 'Email',
                     border: OutlineInputBorder(),
@@ -57,6 +67,8 @@ class _LoginScreenState extends State<LoginScreen> {
 
                 ,ElevatedButton(onPressed:(() {
                 if(form.currentState!.validate()){
+                  //saveUSEr();
+                SaveUser(tfemail.text);
                   Navigator.pushNamed(context, HomeScreen.routeName);
                 }
               }), child: Text("Submit")

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_seance1/authScreens/inscription.dart';
+import 'package:flutter_application_seance1/authScreens/lauchscreen.dart';
 import 'package:flutter_application_seance1/authScreens/login.dart';
 import 'package:flutter_application_seance1/favoris/favoris.dart';
 import 'package:flutter_application_seance1/home.dart';
@@ -21,6 +22,7 @@ class MyApp extends StatelessWidget {
       routes: {
         LoginScreen.routeName:(context) => LoginScreen(),
         HomeScreen.routeName:(context) => HomeScreen(),
+        MyWidget.routeName:(context) => MyWidget(),
          DetailsScreen.routeName :(context) => DetailsScreen(),
         FavorisScreen.routeName :(context) => FavorisScreen(),
         CustomTabBar.routeName :(context) => CustomTabBar()
