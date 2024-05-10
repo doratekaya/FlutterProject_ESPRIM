@@ -11,12 +11,12 @@ class ListWidget extends StatefulWidget {
 }
 
 class _ListWidgetState extends State<ListWidget> {
-  List<Game> games = [Game("dmc5.jpg", "Devil may Cry", 100),
-  Game("fifa.jpg", "FIFA ", 250),
-  Game("nfs.jpg", "Need for speed", 180),
-  Game("rdr2.jpg", "Red Dead Redemption", 80),
-  Game("re8.jpg", "Resident Evil", 650),
-  Game("minecraft.jpg", "MineCrafft", 300),
+  List<Game> games = [Game("1","dmc5.jpg", "Devil may Cry", 100),
+  Game("2","fifa.jpg", "FIFA ", 250),
+  Game("3","nfs.jpg", "Need for speed", 180),
+  Game("4","rdr2.jpg", "Red Dead Redemption", 80),
+  Game("5","re8.jpg", "Resident Evil", 650),
+  Game("6","minecraft.jpg", "MineCrafft", 300),
   ];
   @override
   Widget build(BuildContext context) {

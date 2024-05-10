@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_seance1/models/game.dart';
 import 'package:flutter_application_seance1/models/game_argument.dart';
+import 'package:flutter_application_seance1/service.dart';
 
 class DetailsScreen extends StatefulWidget {
   static final String routeName = "/details";
@@ -38,7 +39,9 @@ class _DetailsScreenState extends State<DetailsScreen> {
           SizedBox(
             width: 200,
             
-            child: ElevatedButton(onPressed: (){}, child: Row(
+            child: ElevatedButton(onPressed: (){
+              ServiceSQLite().insertSQFlite(args.game);
+            }, child: Row(
               children: [
                 Icon(CupertinoIcons.shopping_cart),
                 Text("Ajouter au panier"),
